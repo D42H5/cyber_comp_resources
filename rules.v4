@@ -27,5 +27,8 @@
 # Drop invalid packets
 -A INPUT -m conntrack --cstate INVALID -j DROP
 
+# Log all INPUT
+-A INPUT -j Log
+
 # Commit changes
 COMMIT
